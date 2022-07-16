@@ -12,7 +12,7 @@ Product.init(
     // define columns
 
     // Product - ID column
-    id: {
+    product_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
@@ -35,20 +35,22 @@ Product.init(
     },
 
     // Product Stock - Stock Column
-    id: {
+    stock: {
       type: DataTypes.INTEGER,
       allowNull: false,
       defaultValue: 10,
       validate: {
-        isDecimal: true,
+        isNumeric: true,
       },
     },
 
     // Product Category - Category_id Column
     category_id: {
       type: DataTypes.INTEGER,
-      references: "category",
-      key: "id",
+      references: {
+        model: "category",
+        key: "id",
+      },
     },
   },
   {
