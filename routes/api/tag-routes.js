@@ -50,9 +50,7 @@ router.get("/:id", (req, res) => {
 
 router.post("/", (req, res) => {
   // create a new tag
-  Tag.create({
-    tagName: req.body.tag_name,
-  })
+  Tag.create(req.body)
     .then((dbTagData) => res.json(dbTagData))
     .catch((err) => {
       console.log(err);
