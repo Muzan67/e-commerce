@@ -2,6 +2,8 @@
 
 https://drive.google.com/file/d/1rvMpnfY1LSRCIKWkNSkscWfDJqNRq2a6/view
 
+After creating the models and routes, run npm run seed to seed data to my database to test my routes using Insomnia.
+
 # Screen Castify Video of E-Commerce SQL
 
 https://drive.google.com/file/d/1t4Y8qxVZEthw4sIwU-a6x9EuN4L-AI3x/view
