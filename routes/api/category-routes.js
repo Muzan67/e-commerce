@@ -6,12 +6,12 @@ const { Category, Product } = require("../../models");
 router.get("/", (req, res) => {
   // find all categories
   Category.findAll({
-    attributes: ["id", "categoryName"],
+    attributes: ["id", "category_name"],
     // be sure to include its associated Products
     include: [
       {
         model: Product,
-        attributes: ["id", "productName", "price", "stock", "category_id"],
+        attributes: ["id", "product_name", "price", "stock", "category_id"],
       },
     ],
   })
@@ -27,12 +27,12 @@ router.get("/", (req, res) => {
       where: {
         id: req.params.id,
       },
-      attributes: ["id", "categoryName"],
+      attributes: ["id", "category_name"],
       // be sure to include its associated Products
       include: [
         {
           model: Product,
-          attributes: ["id", "productName", "price", "stock", "category_id"],
+          attributes: ["id", "product_name", "price", "stock", "category_id"],
         },
       ],
     })
